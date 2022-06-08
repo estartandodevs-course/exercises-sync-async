@@ -13,7 +13,7 @@ Consulte a documentação da lib em https://github.com/Marak/colors.js
 const task1 = () => {
   // Deve retornar a mensagem: Terminou a Task 1 em 10 segundos
   return new Promise((resolve,reject) => {
-    setTimeout(() => resolve('Terminou a Task 1 em 10 segundos'),10000)
+    setTimeout(() => resolve('Terminou a Task 1 em 10 segundos'.red),10000)
   })
 
   
@@ -25,7 +25,7 @@ const task2 = () => {
   // Deve retornar a mensagem: Terminou a Task 2 em 5 segundos
 
   return new Promise((resolve,reject) => {
-    setTimeout(() => resolve('Terminou a Task 2 em 5 segundos'),5000)
+    setTimeout(() => resolve('Terminou a Task 2 em 5 segundos'.magenta),5000)
   })
 };
 
@@ -35,7 +35,7 @@ const task3 = () => {
   // Deve retornar a mensagem: Terminou a Task 3 em 4 segundos
 
   return new Promise((resolve,reject) => {
-    setTimeout(() => resolve('Terminou a Task 3 em 4 segundos'),4000)
+    setTimeout(() => resolve('Terminou a Task 3 em 4 segundos'.cyan),4000)
   })
 };
 
@@ -45,7 +45,7 @@ const task4 = () => {
   // Deve retornar a mensagem: Terminou a Task 4 em 4 segundos
   
   return new Promise((resolve,reject) => {
-    setTimeout(() => resolve('Terminou a Task 4 em 4 segundos'),4000)
+    setTimeout(() => resolve('Terminou a Task 4 em 4 segundos'.green),4000)
   })
 };
 
