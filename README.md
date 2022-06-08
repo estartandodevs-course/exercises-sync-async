@@ -29,19 +29,3 @@ Quando for chamado de forma assíncrona, deve ser executado o seguinte comando `
 
 &nbsp;
 &nbsp;
-
-## ℹ️ Testes automatizados
-
-Se quiser checar se sua implementação está correta, rode o comando abaixo
-
-```bash
-$ npm run test
-```
-
-&nbsp;
-&nbsp;
-
----
-
-&nbsp;
-Boa sorte e bom exercício 👋:
