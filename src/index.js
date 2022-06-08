@@ -1,22 +1,27 @@
 const { task1, task2, task3, task4 } = require("./tasks");
 
-const synchronousExecution = () => {
-  // TODO 1: Implemente aqui o código para executar as tarefas de forma SÍNCRONA
-};
+async function synchronousExecution(){
+  console.log(await task1());
+  console.log(await task2());
+  console.log(await task3());
+  console.log(await task4());
+}
 
-const asynchronousExecution = () => {
-  // TODO 2: Implemente aqui o código para executar as tarefas de forma ASSÍNCRONA
-};
+function asynchronousExecution(){
+  task1().then(console.log)
+  task2().then(console.log)
+  task3().then(console.log)
+  task4().then(console.log)
+}
 
-/*
-    TODO 3: Agora esse arquivo deve ter a capacidade de receber parâmetros
-    de entrada. 
-    
-    Caso o parâmetro de entrada seja "sync" e chamará a função synchronousExecution()
-    Caso o parâmetro de entrada seja "async" e chamará a função asynchronousExecution()
-
-    Dica: O Node tem uma api nativa para tratar os parâmetros de entrada
-    consulte https://nodejs.org/docs/latest/api/process.html
-
-
-*/
+const params = process.argv
+switch(params[2]){
+  case "sync":
+    console.log("Executando de forma síncrona: \n")
+    synchronousExecution()
+    break
+  case "async":
+    console.log("Executando de forma assíncrona: \n")
+    asynchronousExecution()
+    break
+}
