@@ -1,31 +1,20 @@
-const colors = require("colors");
-/*
-Para ficar mais parecido com o exemplo do README.md do projeto, 
-use a libe *colors* para colorir as mensagens.
+const colors = require("colors/safe");
 
-As cores usadas no exemplo foram: red, magenta, cyan e green.
 
-Consulte a documentação da lib em https://github.com/Marak/colors.js
-*/
-
-// TODO 1: Essa Task deve retornar uma promise e com delay de 10 segundos
 const task1 = () => {
-  // Deve retornar a mensagem: Terminou a Task 1 em 10 segundos
+  return console.log(colors.yellow('Terminou a'), colors.brightRed.bold('Task'), colors.yellow.bold('1'), colors.yellow('em 10 segundos'))
 };
 
-// TODO 2: Essa Task deve retornar uma promise e com delay de 5 segundos
 const task2 = () => {
-  // Deve retornar a mensagem: Terminou a Task 2 em 5 segundos
+  return console.log(colors.blue('Terminou a'), colors.brightRed.bold('Task'), colors.blue.bold('2'), colors.blue('em 5 segundos'))
 };
 
-// TODO 3: Essa Task deve retornar uma promise e com delay de 4 segundos
 const task3 = () => {
-  // Deve retornar a mensagem: Terminou a Task 3 em 4 segundos
+  return console.log(colors.magenta('Terminou a'), colors.brightRed.bold('Task'), colors.magenta.bold('3'), colors.magenta('em 4 segundos'))
 };
 
-// TODO 4: Essa Task deve retornar uma promise e com delay de 4 segundos
 const task4 = () => {
-  // Deve retornar a mensagem: Terminou a Task 4 em 4 segundos
+  return console.log(colors.green('Terminou a'), colors.brightRed.bold('Task'), colors.green.bold('4'), colors.green('em 4 segundos'))
 };
 
 module.exports = { task1, task2, task3, task4 };
