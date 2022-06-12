@@ -1,13 +1,35 @@
 const { task1, task2, task3, task4 } = require("./tasks");
 
-const synchronousExecution = () => {
-  // TODO 1: Implemente aqui o código para executar as tarefas de forma SÍNCRONA
+const synchronousExecution = async () => {
+  await new Promise((resolve) => {
+    setTimeout(() => {
+        resolve(task1())}, 1000*10)    
+  });
+  await new Promise((resolve) => {
+    setTimeout(() => {
+        resolve(task2())}, 1000*5)    
+  });
+  await new Promise((resolve) => {
+    setTimeout(() => {
+        resolve(task3())}, 1000*4)    
+  });
+  await new Promise((resolve) => {
+    setTimeout(() => {
+        resolve(task4())}, 1000*4)    
+  });
 };
 
 const asynchronousExecution = () => {
-  // TODO 2: Implemente aqui o código para executar as tarefas de forma ASSÍNCRONA
+  setTimeout(task1, 1000*10);
+  setTimeout(task2, 1000*5);
+  setTimeout(task3, 1000*4);
+  setTimeout(task4, 1000*4);
 };
 
+const arg = process.argv[2];
+
+(arg === 'sync')? synchronousExecution(): -1;
+(arg ==='async')? asynchronousExecution(): -1;
 /*
     TODO 3: Agora esse arquivo deve ter a capacidade de receber parâmetros
     de entrada. 
