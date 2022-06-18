@@ -42,19 +42,25 @@ const task1 = () => {
 // TODO 2: Essa Task deve retornar uma promise e com delay de 5 segundos
 const task2 = () => {
   // Deve retornar a mensagem: Terminou a Task 2 em 5 segundos
+  let totalTime =  timeSet(5, 2);
 
+  return totalTime;
 };
 
 // TODO 3: Essa Task deve retornar uma promise e com delay de 4 segundos
 const task3 = () => {
   // Deve retornar a mensagem: Terminou a Task 3 em 4 segundos
+  let totalTime =  timeSet(4, 3);
 
+  return totalTime;
 };
 
 // TODO 4: Essa Task deve retornar uma promise e com delay de 4 segundos
 const task4 = () => {
   // Deve retornar a mensagem: Terminou a Task 4 em 4 segundos
+  let totalTime =  timeSet(4, 4);
 
+  return totalTime;
 };
 
 module.exports = { task1, task2, task3, task4 };
