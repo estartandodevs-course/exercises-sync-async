@@ -2,12 +2,10 @@ const colors = require("colors");
 
 const oneSecond = 1000;
 
-function timeSet(interval, taskNumber) {
+function timeSet(interval, taskNumber, color) {
   let counter = new Promise (async (resolve, reject) => {
     try {
-      console.time(`task${taskNumber}`);
       setTimeout(() => {
-        console.timeEnd(`task${taskNumber}`);
         resolve(`Terminou a Task ${taskNumber} em ${interval} segundos`);
       }, interval * oneSecond);
     } catch (err) {
@@ -27,40 +25,35 @@ Consulte a documentação da lib em https://github.com/Marak/colors.js
 */
 
 // TODO 1: Essa Task deve retornar uma promise e com delay de 10 segundos
-const task1 = () => {
+const task1 = async () => {
   // Deve retornar a mensagem: Terminou a Task 1 em 10 segundos
-  let totalTime =  timeSet(10, 1);
+  let totalTime = await timeSet(10, 1);
 
-  return totalTime;
+  return totalTime.red;
 };
 
-// task1().then((text) => {
-//    console.log(text)
-// })
-
-
 // TODO 2: Essa Task deve retornar uma promise e com delay de 5 segundos
-const task2 = () => {
+const task2 = async () => {
   // Deve retornar a mensagem: Terminou a Task 2 em 5 segundos
-  let totalTime =  timeSet(5, 2);
+  let totalTime = await timeSet(5, 2);
 
-  return totalTime;
+  return totalTime.yellow;
 };
 
 // TODO 3: Essa Task deve retornar uma promise e com delay de 4 segundos
-const task3 = () => {
+const task3 = async () => {
   // Deve retornar a mensagem: Terminou a Task 3 em 4 segundos
-  let totalTime =  timeSet(4, 3);
-
-  return totalTime;
+  let totalTime = await timeSet(4, 3);
+  
+  return totalTime.cyan;
 };
 
 // TODO 4: Essa Task deve retornar uma promise e com delay de 4 segundos
-const task4 = () => {
+const task4 = async () => {
   // Deve retornar a mensagem: Terminou a Task 4 em 4 segundos
-  let totalTime =  timeSet(4, 4);
-
-  return totalTime;
+  let totalTime = await timeSet(4, 4);
+  
+  return totalTime.green;
 };
 
 module.exports = { task1, task2, task3, task4 };
